@@ -1,0 +1,44 @@
+<svg width="640" height="440" viewBox="0 0 640 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<mask id="mask0_503_5862" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="440">
+<rect width="640" height="440" rx="44" fill="url(#paint0_radial_503_5862)"/>
+</mask>
+<g mask="url(#mask0_503_5862)">
+<g style="mix-blend-mode:overlay">
+<rect x="-968" y="-288" width="1920" height="921" fill="url(#paint1_linear_503_5862)"/>
+</g>
+<g style="mix-blend-mode:multiply" opacity="0.78">
+<rect x="-968" y="-288" width="1920" height="921" fill="url(#paint2_linear_503_5862)"/>
+</g>
+</g>
+</g>
+<path d="M238 168.75L176.5 220L238 271.25" stroke="url(#paint3_linear_503_5862)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M402 168.75L463.5 220L402 271.25" stroke="url(#paint4_linear_503_5862)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M361 107.25L279 332.75" stroke="url(#paint5_linear_503_5862)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<radialGradient id="paint0_radial_503_5862" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 259) rotate(180) scale(640 440.21)">
+<stop stop-color="#21538C"/>
+<stop offset="1" stop-color="#00145C"/>
+</radialGradient>
+<linearGradient id="paint1_linear_503_5862" x1="-8.00012" y1="-288" x2="-8.63495" y2="633" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1C4583"/>
+<stop offset="1" stop-color="#2A4282"/>
+</linearGradient>
+<linearGradient id="paint2_linear_503_5862" x1="-8.00012" y1="-288" x2="-8.63495" y2="633" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1C4583"/>
+<stop offset="1" stop-color="#2A4282"/>
+</linearGradient>
+<linearGradient id="paint3_linear_503_5862" x1="207.25" y1="168.75" x2="207.25" y2="271.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint4_linear_503_5862" x1="432.75" y1="168.75" x2="432.75" y2="271.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint5_linear_503_5862" x1="320" y1="107.25" x2="320" y2="332.75" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
