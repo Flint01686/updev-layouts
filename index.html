@@ -16,12 +16,27 @@
 
 <body>
 
+
+  <div class="cookie-policy">
+  <div class="container">
+    <div class="cookie-policy__content">
+      <div class="cookie-policy__text">We use cookies to analyse the use of this website. For more information, please see our <a href="#">Cookie Policy</a>.</div>
+      <div class="cookie-policy__btns">
+        <a href="" class="btn btn--empty btn--small">Accept all</a>
+        <a   class="cookie-policy__close"><img src="images/close.svg" alt=""></a>
+      </div>
+    
+    </div>
+  </div>
+  </div>
+  
+
   <header>
     <div class="top-header">
       <div class="container">
         <div class="top-header__content">
           <span class="top-header__text">RealTech Startup raised <span>$300.000</span> thanks to MVP</span>
-          <div class="read-link"><a href="">Read the Case Study <span class="icon"><img src="images/orange-arrow.svg" alt=""></span></a></div>
+          <div class="read-link"><a  class="modal-trigger" data-modal-id="modal-5">Read the Case Study <span class="icon"><img src="images/orange-arrow.svg" alt=""></span></a></div>
         </div>
       </div>
     </div>
@@ -311,10 +326,33 @@
       consent of the copyright holder.</div>
   </footer>
 
+  <div id="modal-5" class="modal" data-modal-effect="slide-bottom">
+    <div class="modal-content">
+    
+      <div class="modal-content__title">
+        <small>Please enter your email </small>
+        To receive the Case Study
+      </div>
 
+<div class="modal-content__checkbox">
+  <div class="checkbox">
+    <input class="styled-checkbox" id="checkbox-1" type="checkbox" value="value1">
+    <label for="checkbox-1">I’m agree with <a href="#">Privacy policy</a> </label>
+  </div>
+</div>
+
+      <div class="chat-input">
+        <input type="text" placeholder="roman_poskrebyshev@gmail.com">
+        <button><img src="images/send.svg" alt=""></button>
+      </div>
+    
+      <a href="#" class="modal-close"><img src="images/close.svg" alt=""></a>
+    </div>
+  </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/scripts.js"></script>
 
 

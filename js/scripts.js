@@ -1,25 +1,76 @@
- if (document.documentElement.clientWidth < 992) {
+
+ 
+ var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '390',
+      width: '640',
+      videoId: 'Ryp5FjHX4Wc',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  // 5. The API calls this function when the player state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  var done = false;
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+      //setTimeout(stopVideo, 6000);
+      done = true;
+    }
+  }
+  function stopVideo() {
+    player.stopVideo();
+  }
+
+
+ $(document).ready(function () {
+
    $('.main-menu ul a.opener').click(function () {
      $(this).parent().find("ul:first").slideToggle();
      $(this).parent().toggleClass('active');
      return false;
    });
 
- }
+   $('ul.accordion a.opener').click(function () {
+     $(this).parent().find("ul:first").slideToggle();
+     $(this).parent().toggleClass('active');
+     return false;
+   });
 
- $(document).ready(function () {
 
-  $('ul.accordion a.opener').click(function () {
-    $(this).parent().find("ul:first").slideToggle();
-    $(this).parent().toggleClass('active');
-    return false;
-  });
 
    $('.burger').click(function () {
      if ($('.main-menu,.burger,body').hasClass('open')) {
        $('.main-menu,.burger,body').removeClass('open');
      } else {
        $('.main-menu,.burger,body').addClass('open');
+     }
+   });
+
+
+   $('.cookie-policy__close').click(function () {
+     if ($('.cookie-policy').hasClass('close')) {
+       $('.cookie-policy').removeClass('close');
+     } else {
+       $('.cookie-policy').addClass('close');
      }
    });
 
