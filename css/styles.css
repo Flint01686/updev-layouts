@@ -141,6 +141,12 @@ body.open {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  body.open-policy {
+    overflow: hidden;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1360px;
@@ -1029,13 +1035,19 @@ header {
 
 .case__links a {
   pointer-events: none;
-  margin: 0 17px;
+  margin: 0 34px 0 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   color: #FFBAAB;
+}
+
+@media (max-width: 767px) {
+  .case__links a {
+    margin: 0 17px;
+  }
 }
 
 .case__links a:hover {
@@ -1306,11 +1318,11 @@ header {
   background: #747FE4;
 }
 
-.case-small .case__title {
+.case-small .case-small__title {
   color: #221B96;
 }
 
-.case-small .case__video {
+.case-small .case-small__video {
   color: #1D55C2;
 }
 
@@ -1319,13 +1331,14 @@ header {
   height: 44px;
   font-size: 16px;
   padding: 0 20px;
+  text-decoration: none !important;
 }
 
 .case-small .btn:hover {
   color: #fff;
 }
 
-.case-small .case__links a {
+.case-small .case-small__links a {
   color: #FA8970;
 }
 
@@ -1423,13 +1436,17 @@ header {
 
 .case-small__links a {
   pointer-events: none;
-  margin: 0 17px;
+  margin: 0 34px 0 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
   color: #FFBAAB;
+}
+
+@media (max-width: 767px) {
+  .case-small__links a {
+    margin: 0 17px;
+  }
 }
 
 .case-small__links a:hover {
@@ -1438,7 +1455,7 @@ header {
 
 .case-small__video {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   color: #1d55c2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1458,7 +1475,7 @@ header {
   width: 24px;
   height: 2px;
   background: #FA8970;
-  margin: 0 22px;
+  margin: 0 5px;
 }
 
 .case-small__play {
@@ -1581,7 +1598,7 @@ header {
 @media (max-width: 480px) {
   .case-small__image {
     width: 100%;
-    min-width: 290px;
+    min-width: 225px;
   }
 }
 
@@ -2070,6 +2087,12 @@ ul.listed li:last-child {
   height: 990px;
 }
 
+@media (min-width: 1921px) {
+  .main-section {
+    background-size: cover;
+  }
+}
+
 @media (max-width: 992px) {
   .main-section {
     height: auto;
@@ -2174,13 +2197,14 @@ h1.center {
 }
 
 .second-section {
-  padding-top: 245px !important;
-  margin-top: -100px !important;
+  padding-top: calc(100% + 145px) !important;
+  margin-top: -100% !important;
 }
 
 @media (max-width: 767px) {
   .second-section {
     padding-top: 150px !important;
+    margin-top: -100px !important;
   }
 }
 
@@ -2426,6 +2450,13 @@ h1.center {
   height: 100%;
 }
 
+@media (max-width: 767px) {
+  .me-item__text {
+    max-width: calc(100% - 40px);
+    word-wrap: break-word;
+  }
+}
+
 .me-item__name {
   font-weight: bold;
   font-size: 14px;
@@ -2479,9 +2510,7 @@ h1.center {
 }
 
 .me-item__message {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2499,6 +2528,14 @@ h1.center {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+@media (max-width: 767px) {
+  .me-item__message {
+    word-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%;
+  }
 }
 
 .me-item__message a {
@@ -3392,6 +3429,12 @@ footer:before {
   z-index: 9;
   position: relative;
   padding-bottom: 100px;
+}
+
+@media (min-width: 1921px) {
+  .inner-section {
+    background-size: cover;
+  }
 }
 
 @media (max-width: 992px) {
@@ -5498,7 +5541,71 @@ footer:before {
   text-decoration: none;
 }
 
+.mobile-policy-btn {
+  display: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #211173;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 113;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.mobile-policy-btn.open-policy span {
+  top: 14px;
+}
+
+.mobile-policy-btn.open-policy span:last-child {
+  top: auto;
+  bottom: 14px;
+}
+
+.mobile-policy-btn span {
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  top: 0;
+}
+
+.mobile-policy-btn span img {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  width: 15px;
+}
+
+.mobile-policy-btn span:last-child {
+  top: auto;
+  bottom: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+@media (max-width: 767px) {
+  .mobile-policy-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .policy {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5508,22 +5615,58 @@ footer:before {
 }
 
 .policy__side {
-  top: 20px;
   width: 316px;
 }
 
+@media (max-width: 1280px) {
+  .policy__side {
+    width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .policy__side {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+  }
+}
+
+.policy__side.open-policy {
+  display: block;
+  background: #fff;
+  z-index: 112;
+}
+
+.policy__side-sticky {
+  top: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .policy__side ul li {
-  margin-bottom: 38px;
+  margin-bottom: 15px;
 }
 
 .policy__side ul li a {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 150%;
   color: #130F67;
   text-decoration: none;
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-bottom: 1px solid transparent;
+}
+
+.policy__side ul li a:hover {
+  border-bottom: 1px solid #E97551;
 }
 
 .policy__side ul li a.active {
@@ -5532,6 +5675,19 @@ footer:before {
 
 .policy__content {
   width: calc(100% - 432px);
+  position: relative;
+}
+
+@media (max-width: 1280px) {
+  .policy__content {
+    width: calc(100% - 280px);
+  }
+}
+
+@media (max-width: 767px) {
+  .policy__content {
+    width: 100%;
+  }
 }
 
 .chat-fast-message {
